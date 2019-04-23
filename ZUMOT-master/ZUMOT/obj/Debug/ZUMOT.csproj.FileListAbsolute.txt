@@ -1,0 +1,101 @@
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.csprojAssemblyReference.cache
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.Properties.Resources.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.csproj.GenerateResource.cache
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.csproj.CoreCompileInputs.cache
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\bin\Debug\ZUMOT.exe.config
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\bin\Debug\ZUMOT.exe
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\bin\Debug\ZUMOT.pdb
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.exe
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.pdb
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\pantallas.AgregarD.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\pantallas.AgregarF.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\PANTALLASVENDEDORES.consultadeinformacioncliente.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.estado_soli.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\pantallas.Existencia.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.FacturaAdmi.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Menu_admi.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.formVerproyecto.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Gastos_Administrativos.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Gastos_Construccion.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\pantallas_de_clientes.Ingresarcliente.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\pantallas_de_clientes.ingresardocs.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\PANTALLASVENDEDORES.Iniciodevendedores.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\WindowsFormsApp1.INICIO_SESION.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Inventario.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\pantallas_de_clientes.modificarcliente.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\pantallas.ModificarF.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.modificar_Fac.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Form_CProyecto.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\WindowsFormsApp1.RECUPERACIONCUENTA.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\pantallas.ReporteF.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\administracion1.solicitudes.resources
+C:\Users\Moy Portillo\Source\Repos\ZUMOT\ZUMOT\obj\Debug\PANTALLASVENDEDORES.Todoslosclientes.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\bin\Debug\ZUMOT.exe.config
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\bin\Debug\ZUMOT.exe
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\bin\Debug\ZUMOT.pdb
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.csprojAssemblyReference.cache
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\pantallas.AgregarD.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\pantallas.AgregarF.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\PANTALLASVENDEDORES.consultadeinformacioncliente.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.estado_soli.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\pantallas.Existencia.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.FacturaAdmi.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Menu_admi.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.formVerproyecto.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Gastos_Administrativos.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Gastos_Construccion.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\pantallas_de_clientes.Ingresarcliente.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\pantallas_de_clientes.ingresardocs.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\PANTALLASVENDEDORES.Iniciodevendedores.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\WindowsFormsApp1.INICIO_SESION.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Inventario.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\pantallas_de_clientes.modificarcliente.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\pantallas.ModificarF.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.modificar_Fac.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.Properties.Resources.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.Form_CProyecto.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\WindowsFormsApp1.RECUPERACIONCUENTA.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\pantallas.ReporteF.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\administracion1.solicitudes.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\PANTALLASVENDEDORES.Todoslosclientes.resources
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.csproj.GenerateResource.cache
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.csproj.CoreCompileInputs.cache
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.exe
+C:\Users\Acallejas\source\repos\ZUMOT\ZUMOT\obj\Debug\ZUMOT.pdb
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\bin\Debug\ZUMOT.exe.config
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\bin\Debug\ZUMOT.exe
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\bin\Debug\ZUMOT.pdb
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.csprojAssemblyReference.cache
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\pantallas.AgregarD.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\pantallas.AgregarF.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\PANTALLASVENDEDORES.consultadeinformacioncliente.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.estado_soli.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\pantallas.Existencia.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.FacturaAdmi.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Menu_admi.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.formVerproyecto.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Gastos_Administrativos.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Gastos_Construccion.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\pantallas_de_clientes.Ingresarcliente.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\pantallas_de_clientes.ingresardocs.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\PANTALLASVENDEDORES.Iniciodevendedores.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\WindowsFormsApp1.INICIO_SESION.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Inventario.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\pantallas_de_clientes.modificarcliente.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\pantallas.ModificarF.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.modificar_Fac.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Properties.Resources.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Form_CProyecto.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\WindowsFormsApp1.RECUPERACIONCUENTA.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\pantallas.ReporteF.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\administracion1.solicitudes.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\PANTALLASVENDEDORES.Todoslosclientes.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.csproj.GenerateResource.cache
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.exe
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.pdb
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Detalle_solicitud.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.inventario_bodega.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Pantalla_bodega.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.reporte_salida.resources
+C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Solicitudes_pendientes.resources
