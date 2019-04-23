@@ -45,8 +45,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.grobox2 = new System.Windows.Forms.GroupBox();
-            this.lbuser = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblconfcont = new System.Windows.Forms.Label();
             this.lblnuecont = new System.Windows.Forms.Label();
             this.txtContrasenia = new System.Windows.Forms.TextBox();
@@ -117,6 +115,7 @@
             this.txtpregudos.Size = new System.Drawing.Size(318, 22);
             this.txtpregudos.TabIndex = 4;
             this.txtpregudos.TextChanged += new System.EventHandler(this.txtpregudos_TextChanged);
+            this.txtpregudos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpregudos_KeyPress);
             // 
             // txtpreguuno
             // 
@@ -128,20 +127,22 @@
             this.txtpreguuno.Size = new System.Drawing.Size(319, 22);
             this.txtpreguuno.TabIndex = 5;
             this.txtpreguuno.TextChanged += new System.EventHandler(this.txtpreguuno_TextChanged);
+            this.txtpreguuno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpreguuno_KeyPress);
             // 
             // txtusuariorecu
             // 
             this.txtusuariorecu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuariorecu.Location = new System.Drawing.Point(196, 177);
             this.txtusuariorecu.Margin = new System.Windows.Forms.Padding(2);
-            this.txtusuariorecu.MaxLength = 30;
+            this.txtusuariorecu.MaxLength = 16;
             this.txtusuariorecu.Name = "txtusuariorecu";
             this.txtusuariorecu.Size = new System.Drawing.Size(244, 22);
             this.txtusuariorecu.TabIndex = 6;
+            this.txtusuariorecu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuariorecu_KeyPress);
             // 
             // btnrecu
             // 
-            this.btnrecu.Location = new System.Drawing.Point(501, 84);
+            this.btnrecu.Location = new System.Drawing.Point(507, 45);
             this.btnrecu.Margin = new System.Windows.Forms.Padding(2);
             this.btnrecu.Name = "btnrecu";
             this.btnrecu.Size = new System.Drawing.Size(75, 59);
@@ -224,8 +225,6 @@
             // 
             // grobox2
             // 
-            this.grobox2.Controls.Add(this.lbuser);
-            this.grobox2.Controls.Add(this.label2);
             this.grobox2.Controls.Add(this.lblconfcont);
             this.grobox2.Controls.Add(this.lblnuecont);
             this.grobox2.Controls.Add(this.txtContrasenia);
@@ -236,26 +235,6 @@
             this.grobox2.TabIndex = 24;
             this.grobox2.TabStop = false;
             this.grobox2.Enter += new System.EventHandler(this.grobox2_Enter);
-            // 
-            // lbuser
-            // 
-            this.lbuser.AutoSize = true;
-            this.lbuser.Location = new System.Drawing.Point(81, 26);
-            this.lbuser.Name = "lbuser";
-            this.lbuser.Size = new System.Drawing.Size(0, 13);
-            this.lbuser.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(210, 134);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "error";
-            this.label2.Visible = false;
             // 
             // lblconfcont
             // 
@@ -291,6 +270,7 @@
             this.txtContrasenia.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasenia.MaxLength = 30;
             this.txtContrasenia.Name = "txtContrasenia";
+            this.txtContrasenia.PasswordChar = '*';
             this.txtContrasenia.Size = new System.Drawing.Size(212, 22);
             this.txtContrasenia.TabIndex = 2;
             this.txtContrasenia.TextChanged += new System.EventHandler(this.txtContrasenia_TextChanged);
@@ -366,8 +346,6 @@
         private System.Windows.Forms.Label lblerror1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox grobox2;
-        private System.Windows.Forms.Label lbuser;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblconfcont;
         private System.Windows.Forms.Label lblnuecont;
         private System.Windows.Forms.TextBox txtContrasenia;

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,9 +43,11 @@
             this.button_Restart = new System.Windows.Forms.Button();
             this.button_Buscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listaInventario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaInventario)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -141,6 +145,7 @@
             this.button_Restart.Size = new System.Drawing.Size(64, 68);
             this.button_Restart.TabIndex = 49;
             this.button_Restart.UseVisualStyleBackColor = true;
+            this.button_Restart.Click += new System.EventHandler(this.button_Restart_Click_1);
             // 
             // button_Buscar
             // 
@@ -150,6 +155,7 @@
             this.button_Buscar.Size = new System.Drawing.Size(64, 68);
             this.button_Buscar.TabIndex = 48;
             this.button_Buscar.UseVisualStyleBackColor = true;
+            this.button_Buscar.Click += new System.EventHandler(this.button_Buscar_Click_1);
             // 
             // groupBox1
             // 
@@ -166,11 +172,42 @@
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             // 
+            // listaInventario
+            // 
+            this.listaInventario.AllowUserToAddRows = false;
+            this.listaInventario.AllowUserToDeleteRows = false;
+            this.listaInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.listaInventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.listaInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listaInventario.DefaultCellStyle = dataGridViewCellStyle2;
+            this.listaInventario.Location = new System.Drawing.Point(201, 368);
+            this.listaInventario.Name = "listaInventario";
+            this.listaInventario.ReadOnly = true;
+            this.listaInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.listaInventario.Size = new System.Drawing.Size(743, 281);
+            this.listaInventario.TabIndex = 51;
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 848);
+            this.Controls.Add(this.listaInventario);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button_Home);
             this.Controls.Add(this.pictureBox2);
@@ -184,6 +221,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +241,6 @@
         private System.Windows.Forms.Button button_Restart;
         private System.Windows.Forms.Button button_Buscar;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView listaInventario;
     }
 }

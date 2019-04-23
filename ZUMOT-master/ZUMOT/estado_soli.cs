@@ -25,7 +25,7 @@ namespace administracion1
         private void button_Home_Click(object sender, EventArgs e)
         {
             this.Close();
-            this.Dispose();
+            
         }
     }
 }

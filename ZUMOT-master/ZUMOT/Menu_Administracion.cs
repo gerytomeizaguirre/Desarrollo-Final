@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using PANTALLASVENDEDORES;
 using pantallas;
+using pantallas_de_clientes;
+using WindowsFormsApp1;
 
 namespace administracion1
 {
     public partial class Menu_admi : Form
     {
+
         public Menu_admi()
         {
             InitializeComponent();
@@ -32,8 +35,8 @@ namespace administracion1
 
         private void RegistrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Iniciodevendedores pantalla_principal = new Iniciodevendedores();
-            pantalla_principal.Show();
+            Ingresarcliente viewCliente = new Ingresarcliente();
+            viewCliente.ShowDialog();
         }
 
         private void ControlDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -121,6 +124,30 @@ namespace administracion1
         private void registroToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void modificarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modificarcliente viewModificarcliente = new modificarcliente();
+            viewModificarcliente.ShowDialog();
+        }
+
+        private void listaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            consultadeinformacioncliente viewcliente = new consultadeinformacioncliente();
+            viewcliente.ShowDialog();
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            INICIO_SESION viewinicio = new INICIO_SESION();
+            this.Close();
+            viewinicio.Show();
+        }
+
+        private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -71,6 +71,7 @@ namespace administracion1
                 comboBox2.Enabled = false;
             }
 
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -98,7 +99,7 @@ namespace administracion1
                 {
                    // id_general.idx = Convert.ToInt32(textBox1.Text);
                     textBox1.Enabled = false;
-                    textBox2.Enabled = true;
+                    textBox2.Enabled = false;
                     comboBox1.Enabled = true;
                     string[] valores = conectar.captar(textBox1.Text);
                     label10.Text = valores[0];
@@ -138,7 +139,16 @@ namespace administracion1
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox2.SelectedIndex > 0)
+            {
+                textBox2.Enabled = true;
+                //database.SeleccionMaterial(comboBox2, comboBox1.Text);
 
+            }
+            else
+            {
+                textBox2.Enabled = false;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -153,8 +163,7 @@ namespace administracion1
             }
             else
             {
-                dataGridView1.Rows.Add(comboBox1.Text, comboBox2.Text, textBox2.Text);
-
+                dataGridView1.Rows.Add(comboBox1.Text, comboBox2.Text, textBox2.Text);      
             }
 
             string tipom = comboBox1.Text;
@@ -186,6 +195,11 @@ namespace administracion1
                 MessageBox.Show("No se pudo consultar bien:  " + ex.ToString());
             }
 
+            comboBox1.SelectedIndex = 0;
+            comboBox2.Enabled = false;
+            textBox2.Enabled = false;
+            textBox2.Text = " ";
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -209,6 +223,8 @@ namespace administracion1
                     MessageBox.Show("Campos Vacios, Revise su seleccion");
 
                 }
+
+
 
                 string query = "Insert into solicitud (id_material, id_tipo_solicitud, fecha_solicitud, comentario, id_tipo_material, identidad_cliente) values(@id_material, @id_tipo_solicitud, @fecha, @comentario, @id_tipo_material, @identidad_cliente)";
                 conexion.enlace();
@@ -240,6 +256,9 @@ namespace administracion1
                 conectar.restaCant(int.Parse(textBox2.Text), comboBox2.Text);
             }
             this.Show();
+            solicitudes so = new solicitudes();
+            so.Show();
+            this.Close();
         }
 
         private void button_Restart_Click(object sender, EventArgs e)
@@ -261,18 +280,18 @@ namespace administracion1
             return val.ToString();
         }
         
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             string[] valore= conectar.cantidad(comboBox2.Text);
             lblcan.Text = valore[0];
             cmax =int.Parse( lblcan.Text);
             textBox2.Text = Clamp(textBox2.Text, cmax);
-            
-        }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
             validaciones.SoloNumeros(e);
         }
+
+        /*private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }*/
 }
 }

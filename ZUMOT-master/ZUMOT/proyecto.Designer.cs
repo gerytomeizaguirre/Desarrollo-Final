@@ -29,27 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CProyecto));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Box_IdCliente = new System.Windows.Forms.TextBox();
+            this.identidad = new System.Windows.Forms.TextBox();
             this.button_Buscar = new System.Windows.Forms.Button();
             this.button_Restart = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button_Home = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataProyecto = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProyecto)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -75,35 +76,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(90, 42);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 25);
+            this.label2.Size = new System.Drawing.Size(185, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Buscar Proyecto";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(48, 84);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(48, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Identidad:";
             // 
-            // Box_IdCliente
+            // identidad
             // 
-            this.Box_IdCliente.Location = new System.Drawing.Point(146, 84);
-            this.Box_IdCliente.Name = "Box_IdCliente";
-            this.Box_IdCliente.Size = new System.Drawing.Size(197, 20);
-            this.Box_IdCliente.TabIndex = 4;
-            this.Box_IdCliente.TextChanged += new System.EventHandler(this.Box_IdCliente_TextChanged);
+            this.identidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.identidad.Location = new System.Drawing.Point(144, 67);
+            this.identidad.MaxLength = 13;
+            this.identidad.Name = "identidad";
+            this.identidad.Size = new System.Drawing.Size(272, 26);
+            this.identidad.TabIndex = 4;
+            this.identidad.TextChanged += new System.EventHandler(this.Box_IdCliente_TextChanged);
+            this.identidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.identidad_KeyPress);
             // 
             // button_Buscar
             // 
             this.button_Buscar.Image = ((System.Drawing.Image)(resources.GetObject("button_Buscar.Image")));
-            this.button_Buscar.Location = new System.Drawing.Point(396, 59);
+            this.button_Buscar.Location = new System.Drawing.Point(475, 26);
             this.button_Buscar.Name = "button_Buscar";
             this.button_Buscar.Size = new System.Drawing.Size(64, 68);
             this.button_Buscar.TabIndex = 5;
@@ -113,16 +117,17 @@
             // button_Restart
             // 
             this.button_Restart.Image = ((System.Drawing.Image)(resources.GetObject("button_Restart.Image")));
-            this.button_Restart.Location = new System.Drawing.Point(481, 59);
+            this.button_Restart.Location = new System.Drawing.Point(554, 26);
             this.button_Restart.Name = "button_Restart";
             this.button_Restart.Size = new System.Drawing.Size(64, 68);
             this.button_Restart.TabIndex = 6;
             this.button_Restart.UseVisualStyleBackColor = true;
+            this.button_Restart.Click += new System.EventHandler(this.button_Restart_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(974, 33);
+            this.pictureBox2.Location = new System.Drawing.Point(875, 34);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(234, 133);
             this.pictureBox2.TabIndex = 7;
@@ -132,7 +137,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(75, 41);
+            this.label4.Location = new System.Drawing.Point(44, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 25);
             this.label4.TabIndex = 8;
@@ -142,7 +147,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox3.Location = new System.Drawing.Point(53, 292);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(63, 70);
             this.pictureBox3.TabIndex = 40;
@@ -151,35 +156,24 @@
             // button_Home
             // 
             this.button_Home.Image = ((System.Drawing.Image)(resources.GetObject("button_Home.Image")));
-            this.button_Home.Location = new System.Drawing.Point(64, 757);
+            this.button_Home.Location = new System.Drawing.Point(36, 777);
             this.button_Home.Name = "button_Home";
             this.button_Home.Size = new System.Drawing.Size(85, 73);
             this.button_Home.TabIndex = 41;
             this.button_Home.UseVisualStyleBackColor = true;
             this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(898, 152);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 42);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "Ver";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.Box_IdCliente);
+            this.groupBox1.Controls.Add(this.identidad);
             this.groupBox1.Controls.Add(this.button_Buscar);
             this.groupBox1.Controls.Add(this.button_Restart);
-            this.groupBox1.Location = new System.Drawing.Point(108, 181);
+            this.groupBox1.Location = new System.Drawing.Point(117, 172);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(822, 146);
+            this.groupBox1.Size = new System.Drawing.Size(720, 125);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -187,23 +181,45 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.pictureBox3);
+            this.groupBox2.Controls.Add(this.dataProyecto);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(64, 348);
+            this.groupBox2.Location = new System.Drawing.Point(78, 312);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1111, 379);
+            this.groupBox2.Size = new System.Drawing.Size(928, 436);
             this.groupBox2.TabIndex = 44;
             this.groupBox2.TabStop = false;
             // 
-            // dataGridView1
+            // dataProyecto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(120, 92);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(676, 221);
-            this.dataGridView1.TabIndex = 43;
+            this.dataProyecto.AllowUserToAddRows = false;
+            this.dataProyecto.AllowUserToDeleteRows = false;
+            this.dataProyecto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataProyecto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataProyecto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataProyecto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataProyecto.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataProyecto.Location = new System.Drawing.Point(49, 54);
+            this.dataProyecto.Name = "dataProyecto";
+            this.dataProyecto.ReadOnly = true;
+            this.dataProyecto.RowHeadersVisible = false;
+            this.dataProyecto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataProyecto.Size = new System.Drawing.Size(728, 354);
+            this.dataProyecto.TabIndex = 43;
+            this.dataProyecto.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProyecto_CellContentDoubleClick);
             // 
             // Form_CProyecto
             // 
@@ -211,7 +227,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1241, 872);
+            this.ClientSize = new System.Drawing.Size(1120, 872);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button_Home);
@@ -221,6 +238,7 @@
             this.Name = "Form_CProyecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de Proyectos";
+            this.Load += new System.EventHandler(this.Form_CProyecto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -228,7 +246,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProyecto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,16 +258,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Box_IdCliente;
+        private System.Windows.Forms.TextBox identidad;
         private System.Windows.Forms.Button button_Buscar;
         private System.Windows.Forms.Button button_Restart;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button_Home;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataProyecto;
     }
 }

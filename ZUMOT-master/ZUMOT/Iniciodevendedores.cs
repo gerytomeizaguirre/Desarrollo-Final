@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
+using administracion1;
 
 namespace PANTALLASVENDEDORES
 {
@@ -36,14 +38,25 @@ namespace PANTALLASVENDEDORES
 
         private void visualizarListaActualClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Todoslosclientes todos = new Todoslosclientes();
-            todos.Show();
+            
         }
 
         private void ingresarNuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pantallas_de_clientes.Ingresarcliente nuevocliente = new pantallas_de_clientes.Ingresarcliente();
             nuevocliente.Show();
+        }
+
+        private void cerrarSeciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            INICIO_SESION viewinicio = new INICIO_SESION();
+            this.Close();
+            viewinicio.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

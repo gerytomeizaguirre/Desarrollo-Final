@@ -65,11 +65,23 @@
     <Compile Include="consultadeinformacioncliente.Designer.cs">
       <DependentUpon>consultadeinformacioncliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="datosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datosCliente.Designer.cs">
+      <DependentUpon>datosCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Detalle_solicitud.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Detalle_solicitud.Designer.cs">
       <DependentUpon>Detalle_solicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="estadoSoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estadoSoli.Designer.cs">
+      <DependentUpon>estadoSoli.cs</DependentUpon>
     </Compile>
     <Compile Include="estado_soli.cs">
       <SubType>Form</SubType>
@@ -89,11 +101,18 @@
     <Compile Include="FacturaAdmi.Designer.cs">
       <DependentUpon>FacturaAdmi.cs</DependentUpon>
     </Compile>
+    <Compile Include="id_general.cs" />
     <Compile Include="inventario_bodega.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="inventario_bodega.Designer.cs">
       <DependentUpon>inventario_bodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuGerencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGerencia.Designer.cs">
+      <DependentUpon>MenuGerencia.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_Administracion.cs">
       <SubType>Form</SubType>
@@ -149,6 +168,12 @@
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="menu_inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_inventario.Designer.cs">
+      <DependentUpon>menu_inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="modificarcliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +212,12 @@
     <Compile Include="RECUPERACIONCUENTA.Designer.cs">
       <DependentUpon>RECUPERACIONCUENTA.cs</DependentUpon>
     </Compile>
+    <Compile Include="registrarEmple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarEmple.Designer.cs">
+      <DependentUpon>registrarEmple.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +229,12 @@
     </Compile>
     <Compile Include="reporte_salida.Designer.cs">
       <DependentUpon>reporte_salida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roles.Designer.cs">
+      <DependentUpon>Roles.cs</DependentUpon>
     </Compile>
     <Compile Include="solicitudes.cs">
       <SubType>Form</SubType>
@@ -227,8 +264,14 @@
     <EmbeddedResource Include="consultadeinformacioncliente.resx">
       <DependentUpon>consultadeinformacioncliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="datosCliente.resx">
+      <DependentUpon>datosCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Detalle_solicitud.resx">
       <DependentUpon>Detalle_solicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="estadoSoli.resx">
+      <DependentUpon>estadoSoli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="estado_soli.resx">
       <DependentUpon>estado_soli.cs</DependentUpon>
@@ -241,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="inventario_bodega.resx">
       <DependentUpon>inventario_bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGerencia.resx">
+      <DependentUpon>MenuGerencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Administracion.resx">
       <DependentUpon>Menu_Administracion.cs</DependentUpon>
@@ -268,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu_inventario.resx">
+      <DependentUpon>menu_inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modificarcliente.resx">
       <DependentUpon>modificarcliente.cs</DependentUpon>
@@ -297,11 +346,17 @@
     <EmbeddedResource Include="RECUPERACIONCUENTA.resx">
       <DependentUpon>RECUPERACIONCUENTA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="registrarEmple.resx">
+      <DependentUpon>registrarEmple.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteF.resx">
       <DependentUpon>ReporteF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reporte_salida.resx">
       <DependentUpon>reporte_salida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roles.resx">
+      <DependentUpon>Roles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="solicitudes.resx">
       <DependentUpon>solicitudes.cs</DependentUpon>

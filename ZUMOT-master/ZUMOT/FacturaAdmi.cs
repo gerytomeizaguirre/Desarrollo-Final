@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;
+using System.Data.SqlClient;
+using administracion1;
+using ZUMOT;
 
 namespace administracion1
 {
-
     public partial class FacturaAdmi : Form
     {
-        conexion cn = new conexion();
+        conexion conectar = new conexion();
+
+
         public FacturaAdmi()
         {
             InitializeComponent();
@@ -25,107 +27,96 @@ namespace administracion1
         {
 
         }
-
-        private void TextBox5_TextChanged(object sender, EventArgs e)
+        //--------------FUNCION PARA LIMPIAR
+        public void limpiar()
         {
-
+            txtidfac.Clear();
+            txtdetalle.Clear();
+            txtcasaco.Clear();
+            txtvalor.Clear();
         }
 
-        private void Label5_Click(object sender, EventArgs e)
+        //--------VALIDACION DE ENTRADAS LLAMAMIENTO EN LA CLASE CONEXION
+        private void txtidfac_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            conexion.ValidarNumeros(e);
         }
 
-        private void TextBox4_TextChanged(object sender, EventArgs e)
+        private void txtcasaco_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            conexion.validarLetras(e);
         }
 
-        private void Label4_Click(object sender, EventArgs e)
+        private void txtdetalle_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            conexion.validarLetras(e);
         }
 
-        private void TextBox3_TextChanged(object sender, EventArgs e)
+        private void txtvalor_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            conexion.ValidarReal(e);
         }
-
-        private void Button_Restart_Click(object sender, EventArgs e)
+        //--------------------------------------------------------------------
+        //---------FUNCION DEL BOTON GUARDAR, PARA LA FACTURA DE ADMINISTRACION CON SUS VALIDACIONES DE DATOS 
+        private void button1_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "" || dateTimePicker1.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
+            if(txtvalor.Text.Contains(".") == false)
             {
-                MessageBox.Show("Favor llenar todos los datos");
+                txtvalor.Text = txtvalor.Text + ".00";
+            }
+            if (txtidfac.Text == "" || dateTimePicker1.Text == "" || txtcasaco.Text == "" || txtdetalle.Text == "" || txtvalor.Text == "")
+            {
+                MessageBox.Show("Campos Vacios.\nFavor LLenar todos los Campos de la factura.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else if(txtidfac.Text.StartsWith("0") == true)
+            {
+                MessageBox.Show("No puede ingresar 0 como primer dijito de la factura.\nFavor verificar el numero de factura.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (conexion.validarPuntoReal(txtvalor.Text) == false || txtvalor.Text.StartsWith("0"))
+            {
+                MessageBox.Show("El precio no es un dígito Decimal o tiene más de dos decimales.\nFavor cambiar los valores del precio.", "ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                /*if (cn.RegFactAdm(textBox1.Text, dateTimePicker1.Text, textBox3.Text, textBox4.Text, decimal.Parse(textBox5.Text)) > 0)
+                try
                 {
-                    MessageBox.Show("Factura Registrada con Exito");
-                    //cn.USUARIOLOGIN2(lbIDEmpleado, Convert.ToInt16(txtUsuario.Text));
-                    this.Hide();
-                    Menu_admi regre = new Menu_admi();
-                    regre.Show();
+                    string query = "INSERT INTO gastos_administrativos (Id_Factura_administrativa,Fecha,Casa_comercial,Descripcion_gasto,Valor_gasto) VALUES (@id_fact,@fecha,@comercio,@desc,@valor)";
+                    conexion.enlace();
+                    SqlCommand comando = new SqlCommand(query, conexion.enlace());
+                    comando.Parameters.AddWithValue("@id_fact", Convert.ToInt64(txtidfac.Text));
+                    comando.Parameters.AddWithValue("@fecha", dateTimePicker1.Text);
+                    comando.Parameters.AddWithValue("@comercio", txtcasaco.Text);
+                    comando.Parameters.AddWithValue("@desc", txtdetalle.Text);
+                    comando.Parameters.AddWithValue("@valor", Convert.ToDouble(txtvalor.Text));
+                    comando.ExecuteNonQuery();
+
+                    MessageBox.Show("Factura Registrada Exitosamente.", "CORRECTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiar();
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo registrar la factura");
-                }*/
-                string query = "INSERT INTO gastos_administrativos (Id_Factura_administrativa,Fecha,Casa_comercial,Descripcion_gasto,Valor_gasto) VALUES (@id_fact,@fecha,@comercio,@desc,@valor)";
-                conexion.enlace();
-                SqlCommand comando = new SqlCommand(query, conexion.enlace());
-                comando.Parameters.AddWithValue("@id_fact", textBox1.Text);
-                comando.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date.ToString("yy//mm//dd"));
-                comando.Parameters.AddWithValue("@comercio", textBox3.Text);
-                comando.Parameters.AddWithValue("@desc", textBox4.Text);
-                comando.Parameters.AddWithValue("@valor", textBox5.Text);
-                comando.ExecuteNonQuery();
-
-                MessageBox.Show("Factura Registrada");
-
+                    MessageBox.Show("Ocurrio un Error Inesperado, Favor volver a repetir > " + ex.ToString(), "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    limpiar();
+                }
+                finally
+                {
+                    conexion.enlace().Close();
+                }
             }
-
         }
-
-        private void Label2_Click(object sender, EventArgs e)
+        //--------------------BOTON REFRESCAR---------
+        private void button_Restart_Click(object sender, EventArgs e)
         {
-
+            limpiar();
         }
 
-        private void Label6_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button_Home_Click(object sender, EventArgs e)
+        //------------------BOTON PARA VOLVER AL MENU
+        private void button_Home_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            this.Dispose();
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

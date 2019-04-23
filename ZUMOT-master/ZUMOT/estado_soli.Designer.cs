@@ -125,9 +125,9 @@
             // button_Home
             // 
             this.button_Home.Image = ((System.Drawing.Image)(resources.GetObject("button_Home.Image")));
-            this.button_Home.Location = new System.Drawing.Point(47, 690);
+            this.button_Home.Location = new System.Drawing.Point(32, 695);
             this.button_Home.Name = "button_Home";
-            this.button_Home.Size = new System.Drawing.Size(75, 54);
+            this.button_Home.Size = new System.Drawing.Size(81, 72);
             this.button_Home.TabIndex = 31;
             this.button_Home.UseVisualStyleBackColor = true;
             this.button_Home.Click += new System.EventHandler(this.button_Home_Click);

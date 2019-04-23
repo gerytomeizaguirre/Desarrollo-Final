@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
 
             if (txtpreguuno.Text == "" || txtpregudos.Text == "")
             {
-                MessageBox.Show("Favor llenar todos los datos");
+                MessageBox.Show("Favor llenar todos los datos", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -91,6 +91,7 @@ namespace WindowsFormsApp1
             {
                 gpregunta.Enabled = false;
                 grobox2.Enabled = true;
+                button2.Enabled = true;
                 
                 
 
@@ -104,28 +105,27 @@ namespace WindowsFormsApp1
 
             if (txtConfirmar.Text == "" || txtContrasenia.Text == "")
             {
-                lblerror.Visible = true;
-                lblerror.Text = "No Puede Dejar la Contraseña en Blanco!!";
-                lblerror.ForeColor = System.Drawing.Color.Red;
+                MessageBox.Show("Campos Contraseña Vacios.\nFavor llenar los campos Vacios", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+            }
+            else if(conexion.verificarcontra(txtContrasenia.Text) == false)
+            {
+                MessageBox.Show("Contraseña Incorrecta.\nLa Contraseña debe de tener letras mayusculas y minusculas, tambien numeros y tener 8 o mas caracteres.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else if(txtConfirmar.Text != txtContrasenia.Text)
+            {
+                MessageBox.Show("La Contraseña no coincide con la anterior.\nFavor verifique que sea la misma.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                if (txtContrasenia.Text != txtConfirmar.Text)
-                {
-                    lblerror.Visible = true;
-                    lblerror.Text = "Las Contraseñas no coinciden";
-                    lblerror.ForeColor = System.Drawing.Color.Red;
-                }
-                else
-                {
                     conexion.enlace();
                     SqlCommand comando = new SqlCommand("Update empleados set contraseña_empleado = '" + txtContrasenia.Text + "' where usuario_empleado = '" + txtusuariorecu.Text+"'", conexion.enlace());
                     int filasAfectadas = comando.ExecuteNonQuery();
                     if (filasAfectadas != 0)
                     {
                         lblerror.Visible = false;
-                        MessageBox.Show("Contraseña Actualizada");
+                        MessageBox.Show("Contraseña Actualizada", "CORRECTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         INICIO_SESION regre = new INICIO_SESION();
                         regre.Show();
@@ -133,9 +133,8 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        MessageBox.Show("NO se Pudo hacer la Actualizacion,");
+                        MessageBox.Show("NO se Pudo hacer la Actualizacion.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
             }
         }
 
@@ -149,6 +148,7 @@ namespace WindowsFormsApp1
         {
             gpregunta.Enabled = false;
             grobox2.Enabled = false;
+            button2.Enabled = false;
         }
 
         private void txtpreguuno_TextChanged(object sender, EventArgs e)
@@ -171,7 +171,7 @@ namespace WindowsFormsApp1
         {
             if (user == "")
             {
-                MessageBox.Show("Campo de Usuario Vacio, Ingresar Usuario.");
+                MessageBox.Show("Campo de Usuario Vacio, Ingresar Usuario.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtusuariorecu.Clear();
                 return;
             }
@@ -191,7 +191,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no encontrado, Verifique datos de Usuario.");
+                    MessageBox.Show("Usuario no encontrado, Verifique datos de Usuario.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtusuariorecu.Clear();
                 }
 
@@ -199,7 +199,7 @@ namespace WindowsFormsApp1
             }
             catch(Exception e)
             {
-                MessageBox.Show("Error de Sistema> " + e.ToString());
+                MessageBox.Show("Error de Sistema> " + e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -277,6 +277,21 @@ namespace WindowsFormsApp1
             string usuar = usuario;
             return usuar;
 
+        }
+
+        private void txtpreguuno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            conexion.validarLetras(e);
+        }
+
+        private void txtpregudos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            conexion.validarLetras(e);
+        }
+
+        private void txtusuariorecu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            conexion.validarLetrasynumero(e);
         }
     }
 }

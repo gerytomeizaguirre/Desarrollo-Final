@@ -35,8 +35,10 @@
             this.ingresarNuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarRegistroClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarListaActualClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarRegistroDeClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSeciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +48,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(903, 428);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -59,7 +61,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.registrosToolStripMenuItem});
+            this.registrosToolStripMenuItem,
+            this.seciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -93,25 +96,40 @@
             // registrosToolStripMenuItem
             // 
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualizarListaActualClientesToolStripMenuItem,
             this.modificarRegistroDeClienteToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.registrosToolStripMenuItem.Text = "Consultas";
             // 
-            // visualizarListaActualClientesToolStripMenuItem
-            // 
-            this.visualizarListaActualClientesToolStripMenuItem.Name = "visualizarListaActualClientesToolStripMenuItem";
-            this.visualizarListaActualClientesToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.visualizarListaActualClientesToolStripMenuItem.Text = "Visualizar lista actual clientes";
-            this.visualizarListaActualClientesToolStripMenuItem.Click += new System.EventHandler(this.visualizarListaActualClientesToolStripMenuItem_Click);
-            // 
             // modificarRegistroDeClienteToolStripMenuItem
             // 
             this.modificarRegistroDeClienteToolStripMenuItem.Name = "modificarRegistroDeClienteToolStripMenuItem";
-            this.modificarRegistroDeClienteToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.modificarRegistroDeClienteToolStripMenuItem.Text = "Visualizar información de un cliente";
+            this.modificarRegistroDeClienteToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.modificarRegistroDeClienteToolStripMenuItem.Text = "Detalle de Registro Cliente";
             this.modificarRegistroDeClienteToolStripMenuItem.Click += new System.EventHandler(this.modificarRegistroDeClienteToolStripMenuItem_Click);
+            // 
+            // seciónToolStripMenuItem
+            // 
+            this.seciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarSeciónToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.seciónToolStripMenuItem.Name = "seciónToolStripMenuItem";
+            this.seciónToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.seciónToolStripMenuItem.Text = "Sesión";
+            // 
+            // cerrarSeciónToolStripMenuItem
+            // 
+            this.cerrarSeciónToolStripMenuItem.Name = "cerrarSeciónToolStripMenuItem";
+            this.cerrarSeciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSeciónToolStripMenuItem.Text = "Cerrar Sesión";
+            this.cerrarSeciónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSeciónToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Iniciodevendedores
             // 
@@ -121,9 +139,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Iniciodevendedores";
-            this.Text = "PANTALLA DE INICIO VENDEDORES";
+            this.Text = "Vendedor - ZUMOT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -141,8 +159,10 @@
         private System.Windows.Forms.ToolStripMenuItem ingresarNuevoClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarRegistroClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarListaActualClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarRegistroDeClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSeciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 
