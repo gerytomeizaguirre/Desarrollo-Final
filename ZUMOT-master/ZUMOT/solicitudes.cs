@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using ZUMOT;
 
 namespace administracion1
 {
@@ -147,6 +147,10 @@ namespace administracion1
             {
                 MessageBox.Show("Campos Vacios, Revise su seleccion");
             }
+            else if (textBox2.Text == "0")
+            {
+                MessageBox.Show("No hay inventario");
+            }
             else
             {
                 dataGridView1.Rows.Add(comboBox1.Text, comboBox2.Text, textBox2.Text);
@@ -186,23 +190,7 @@ namespace administracion1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-            {
-                if ((Convert.ToInt32(row.Cells[0].Value)) < 0)
-                {
-                    for (int i = 0; i < cmbRef.Count; i++)
-                    {
-                        int[] reg = cmbRef[i];
-                        if (reg[0] == (int)row.Cells[0].Value)
-                        {
-                            cmbRef.Remove(reg);
-                            i--;
-                        }
-                    }
-                }
-
-
-            }
+            dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
         }
 
         private void button_Buscar_Click(object sender, EventArgs e)
@@ -214,39 +202,43 @@ namespace administracion1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount == 0)
+            try
             {
-                MessageBox.Show("Campos Vacios, Revise su seleccion");
+                if (dataGridView1.RowCount == 0)
+                {
+                    MessageBox.Show("Campos Vacios, Revise su seleccion");
 
+                }
+
+                string query = "Insert into solicitud (id_material, id_tipo_solicitud, fecha_solicitud, comentario, id_tipo_material, identidad_cliente) values(@id_material, @id_tipo_solicitud, @fecha, @comentario, @id_tipo_material, @identidad_cliente)";
+                conexion.enlace();
+                SqlCommand agregar = new SqlCommand(query, conexion.enlace());
+
+
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+
+                    agregar.Parameters.Clear();
+
+                    //agregar.Parameters.AddWithValue("@id_solicitud", soli);
+                    //agregar.Parameters.AddWithValue("@id_fact",int.Parse(label10.Text));
+                    string[] valores = conectar.obte_mate(Convert.ToString(row.Cells["Material"].Value));
+                    agregar.Parameters.AddWithValue("@id_material", valores[0]);
+                    agregar.Parameters.AddWithValue("@id_tipo_solicitud", soli);
+                    agregar.Parameters.AddWithValue("@fecha", dateTimePicker1.Value);
+                    agregar.Parameters.AddWithValue("@comentario", desc);
+                    string[] valore = conectar.obte_tipo(Convert.ToString(row.Cells["Tipo"].Value));
+                    agregar.Parameters.AddWithValue("@id_tipo_material", valore[0]);
+                    agregar.Parameters.AddWithValue("@identidad_cliente", textBox1.Text);
+                    agregar.ExecuteNonQuery();
+                }
             }
-
-            string query = "Insert into solicitud (id_material, id_tipo_solicitud, fecha, comentario, id_tipo_material, identidad_cliente) values(@id_material, @id_tipo_solicitud, @fecha, @comentario, @id_tipo_material, @identidad_cliente)";
-            conexion.enlace();
-            SqlCommand agregar = new SqlCommand(query, conexion.enlace());
-
-            //DataSet ds = new DataSet();
-
-            //dataGridView1.DataSource = ds.Tables[0];
-
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+            catch
             {
-              
-                agregar.Parameters.Clear();
-
-                //agregar.Parameters.AddWithValue("@id_solicitud", soli);
-                //agregar.Parameters.AddWithValue("@id_fact",int.Parse(label10.Text));
-                string[] valores = conectar.obte_mate(Convert.ToString(row.Cells["Material"].Value));
-                agregar.Parameters.AddWithValue("@id_material", valores[0]);
-                agregar.Parameters.AddWithValue("@id_tipo_solicitud", soli);
-                agregar.Parameters.AddWithValue("@fecha", dateTimePicker1.Value);
-                agregar.Parameters.AddWithValue("@comentario", desc);
-                string[] valore = conectar.obte_tipo(Convert.ToString(row.Cells["Tipo"].Value));
-                agregar.Parameters.AddWithValue("@id_tipo_material",  valore[0]);
-                agregar.Parameters.AddWithValue("@identidad_cliente", textBox1.Text);
-                agregar.ExecuteNonQuery();
+                MessageBox.Show("Datos Agregados");
+                conectar.restaCant(int.Parse(textBox2.Text), comboBox2.Text);
             }
-            MessageBox.Show("Datos Agregados");
-
             this.Show();
         }
 
@@ -268,15 +260,19 @@ namespace administracion1
 
             return val.ToString();
         }
-
+        
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             string[] valore= conectar.cantidad(comboBox2.Text);
             lblcan.Text = valore[0];
             cmax =int.Parse( lblcan.Text);
             textBox2.Text = Clamp(textBox2.Text, cmax);
+            
         }
-        
 
-    }
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.SoloNumeros(e);
+        }
+}
 }

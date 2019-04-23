@@ -99,3 +99,40 @@ C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.inventario_bodega.re
 C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Pantalla_bodega.resources
 C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.reporte_salida.resources
 C:\Users\user1\Desktop\1\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Solicitudes_pendientes.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\bin\Debug\ZUMOT.exe.config
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\bin\Debug\ZUMOT.exe
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\bin\Debug\ZUMOT.pdb
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.csprojAssemblyReference.cache
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\pantallas.AgregarD.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\pantallas.AgregarF.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\PANTALLASVENDEDORES.consultadeinformacioncliente.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Detalle_solicitud.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.estado_soli.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\pantallas.Existencia.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.FacturaAdmi.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.inventario_bodega.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Menu_admi.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.formVerproyecto.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Gastos_Administrativos.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Gastos_Construccion.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\pantallas_de_clientes.Ingresarcliente.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\pantallas_de_clientes.ingresardocs.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\PANTALLASVENDEDORES.Iniciodevendedores.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\WindowsFormsApp1.INICIO_SESION.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Inventario.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\pantallas_de_clientes.modificarcliente.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\pantallas.ModificarF.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.modificar_Fac.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Pantalla_bodega.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Properties.Resources.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.Form_CProyecto.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\WindowsFormsApp1.RECUPERACIONCUENTA.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\pantallas.ReporteF.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.reporte_salida.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\administracion1.solicitudes.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.Solicitudes_pendientes.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\PANTALLASVENDEDORES.Todoslosclientes.resources
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.csproj.GenerateResource.cache
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.csproj.CoreCompileInputs.cache
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.exe
+C:\Users\Geysel Rodriguez\Pictures\Desarrollo\Monca\ZUMOT-master\ZUMOT\obj\Debug\ZUMOT.pdb

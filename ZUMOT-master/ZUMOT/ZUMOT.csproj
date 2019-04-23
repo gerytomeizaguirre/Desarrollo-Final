@@ -217,6 +217,7 @@
     <Compile Include="Todoslosclientes.Designer.cs">
       <DependentUpon>Todoslosclientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="validaciones.cs" />
     <EmbeddedResource Include="AgregarD.resx">
       <DependentUpon>AgregarD.cs</DependentUpon>
     </EmbeddedResource>

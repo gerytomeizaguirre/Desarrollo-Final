@@ -32,10 +32,8 @@ namespace ZUMOT
         {
 
             Detalle_solicitud deso = new Detalle_solicitud(id);
-            
-            deso.Show();
-            this.Hide();
-            
+            deso.ShowDialog();
+
         }
 
         private void Solicitudes_pendientes_Load(object sender, EventArgs e)

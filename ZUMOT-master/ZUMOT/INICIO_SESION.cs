@@ -52,7 +52,9 @@ namespace WindowsFormsApp1
                     }
                         else if (datatabla.Rows[0][1].ToString() == "3")
                     {
-
+                        Pantalla_bodega fa = new Pantalla_bodega();
+                        fa.Show();
+                        this.Hide();
                     }
                         else if(datatabla.Rows[0][1].ToString() == "4")
                     {

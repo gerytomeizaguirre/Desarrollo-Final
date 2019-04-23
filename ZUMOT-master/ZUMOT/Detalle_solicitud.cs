@@ -38,6 +38,7 @@ namespace ZUMOT
 
         private void Detalle_solicitud_Load(object sender, EventArgs e)
         {
+            try { 
 
             txtId_cli.Text = id;
             string[] valores = conectar.captar_detalle(txtId_cli.Text);
@@ -45,6 +46,13 @@ namespace ZUMOT
             txtfecha.Text = valores[1];
             txttiposoli.Text = valores[2];
             dgv1.DataSource = conectar.Mostrar_detalle(txtId_cli.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No pudo Conectarse > " + ex.ToString());
+            }
         }
+
+
     }
 }

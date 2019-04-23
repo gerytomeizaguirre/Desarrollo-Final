@@ -22,7 +22,7 @@ namespace administracion1
 
         public static SqlConnection enlace()
         {
-            SqlConnection conexiondata = new SqlConnection("Data Source=USER1-PC\\DAVID;Initial Catalog=Data_ZUMOT;Integrated Security=True");
+            SqlConnection conexiondata = new SqlConnection("Data Source=LAPTOP-FJ5G6FGJ\\SQLEXPRESS;Initial Catalog=Data_ZUMOT;Integrated Security=True");
             
                 conexiondata.Open();
                 return conexiondata;
@@ -276,29 +276,36 @@ namespace administracion1
             return resultado;
         }
         /*-------------------------------------------Detalle------------------------------------------------------------------*/
-        public string[] captar_detalle(string nombre)
+        public string[] captar_detalle(string identidad)
         {
             SqlCommand cmd;
             conectar = conexion.enlace();
             SqlConnection cn = conexion.enlace();
-
-            cmd = new SqlCommand("select c.nombre_cliente, a.fecha, b.descripcion_tipo_solicitud from solicitud a inner join tipo_solicitud b on a.id_tipo_solicitud = b.id_tipo_solicitud inner join proyecto c on a.identidad_cliente=c.identidad_cliente where a.identidad_cliente='" + nombre + "'", cn);
-            SqlDataReader dr = cmd.ExecuteReader();
             string[] resultado = null;
-            while (dr.Read())
+            try
             {
-                string[] valores =
+                cmd = new SqlCommand("select c.nombre_cliente, c.identidad_cliente, b.id_tipo_solicitud, b.fecha_solicitud from solicitud b inner join proyecto c on b.id_solicitud = c.identidad_cliente where c.identidad_cliente = '" + identidad + "'", cn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                
+                while (dr.Read())
                 {
+                    string[] valores =
+                    {
                     dr[0].ToString(),
                     dr[1].ToString(),
                     dr[2].ToString()
-                    
+                    };
 
-                };
-                resultado = valores;
+                    resultado = valores;
+                }
+                return resultado;
             }
-            cn.Close();
-            return resultado;
+            catch (Exception ex)
+            {
+                MessageBox.Show("No pudo Conectarse > " + ex.ToString());
+                return resultado;
+            }
+            
         }
         public DataTable Mostrar_detalle(string id)
         {
@@ -314,6 +321,25 @@ namespace administracion1
 
             cn.Close();
             return dt;
+        }
+
+        //------------------------------------------RESTA CANTIDAD DE INVENTARIO-----------------------------------------------------------------------------//
+        public int restaCant(int cantidad, string nom)
+        {
+            int q = 0;
+            SqlCommand cmd;
+            conectar = conexion.enlace();
+            SqlConnection cn = conexion.enlace();
+            {
+
+                cmd = new SqlCommand(string.Format("update material set cantidad_bodega = (cantidad_bodega -" + cantidad + ") where nombre_material = '" + nom + "'", cantidad), cn);
+                q = cmd.ExecuteNonQuery();
+                cn.Close();
+
+            }
+
+            return q;
+
         }
     }
 }
